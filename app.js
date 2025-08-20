@@ -13,7 +13,7 @@ const defaultApps = [
         url: "https://t.me/magic_ball_3000_bot",
         icon: "🎱",
         category: "Games",
-        description: "",
+        description: "Games",
         id: "magicball",
         addedDate: Date.now()
     },
@@ -22,7 +22,7 @@ const defaultApps = [
         url: "https://t.me/drink_adviser_bot",
         icon: "🍹",
         category: "Games", 
-        description: "",
+        description: "Games",
         id: "yourbarman",
         addedDate: Date.now()
     },
