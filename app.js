@@ -6,10 +6,6 @@ let editMode = false;
 let longPressTimer = null;
 let selectedAppForDelete = null;
 
-// Предустановленные приложения
-const defaultApps = [
-];
-
 const categories = ["All", "Games", "Finance", "Utilities", "Shopping", "Business", "Marketplace", "Social"];
 
 // Инициализация приложения
