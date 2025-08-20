@@ -6,6 +6,29 @@ let editMode = false;
 let longPressTimer = null;
 let selectedAppForDelete = null;
 
+// Предустановленные приложения
+const defaultApps = [
+    {
+        name: "MagicBall",
+        url: "https://t.me/magic_ball_3000_bot",
+        icon: "🎱",
+        category: "Games",
+        description: "",
+        id: "magicball",
+        addedDate: Date.now()
+    },
+    {
+        name: "YourBarman",
+        url: "https://t.me/drink_adviser_bot",
+        icon: "🍹",
+        category: "Games", 
+        description: "",
+        id: "yourbarman",
+        addedDate: Date.now()
+    },
+    
+];
+
 const categories = ["All", "Games", "Finance", "Utilities", "Shopping", "Business", "Marketplace", "Social"];
 
 // Инициализация приложения
