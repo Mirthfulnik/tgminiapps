@@ -50,16 +50,6 @@ function initializeTelegramWebApp() {
             document.documentElement.style.setProperty('--tg-button-color', tg.themeParams.button_color || '#0088cc');
         }
         
-        // Настраиваем кнопку назад
-        tg.BackButton.show();
-        tg.BackButton.onClick(() => {
-            if (editMode) {
-                exitEditMode();
-            } else {
-                tg.close();
-            }
-        });
-        
         // Включаем haptic feedback
         tg.HapticFeedback.impactOccurred('light');
     }
@@ -104,19 +94,6 @@ function initializeEventListeners() {
         addBtn.addEventListener('click', openAddModal);
     }
     
-    // Кнопка назад
-    const backBtn = document.getElementById('back-btn');
-    if (backBtn) {
-        backBtn.addEventListener('click', () => {
-            if (editMode) {
-                exitEditMode();
-            } else if (window.Telegram && window.Telegram.WebApp) {
-                window.Telegram.WebApp.close();
-            } else {
-                window.close();
-            }
-        });
-    }
     
     // Поиск
     const searchInput = document.getElementById('search-input');
@@ -165,20 +142,6 @@ function initializeEventListeners() {
     const contextBackdrop = document.querySelector('.context-menu-backdrop');
     if (contextBackdrop) {
         contextBackdrop.addEventListener('click', closeContextMenu);
-    }
-}
-
-// Обновление времени в статус баре
-function updateStatusTime() {
-    const statusTime = document.getElementById('status-time');
-    if (statusTime) {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString('ru-RU', { 
-            hour: '2-digit', 
-            minute: '2-digit',
-            hour12: false 
-        });
-        statusTime.textContent = timeString;
     }
 }
 
